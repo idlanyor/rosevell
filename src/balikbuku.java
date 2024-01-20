@@ -85,7 +85,7 @@ private void tampil(){
         model.addColumn("Status");
         try{
             String status = "Belum Kembali";
-            String query = "select*from pinjaman where status = '"+status+"'";
+            String query = "SELECT * FROM pinjaman WHERE status = '"+status+"'";
             java.sql.Connection kon = (Connection) koneksi.koneksi();
             java.sql.Statement stm = kon.createStatement();
             java.sql.ResultSet data = stm.executeQuery(query);

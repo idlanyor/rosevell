@@ -40,13 +40,13 @@ public class berandaUser extends javax.swing.JFrame {
        
    try{
       String ss = session.getuser();           
-    String query = ("select nama_admin from "
-                    + "admin where username='"+ ss+"' ");
+    String query = ("select nama from "
+                    + "mahasiswa where username='"+ ss+"' ");
             java.sql.Connection con = (Connection) koneksi.koneksi();
        java.sql.Statement st = con.createStatement();
        java.sql.ResultSet data = st.executeQuery(query);
        while(data.next()){
-         lblnama.setText(data.getString("nama_admin"));
+         lblnama.setText(data.getString("nama"));
        }
        
    }   

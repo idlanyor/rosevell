@@ -192,7 +192,7 @@ public class login extends javax.swing.JFrame  {
             // session ss = new session();
             session.setuser(txtuser.getText());
             try{
-                String query = "SELECT * FROM login WHERE username='"+txtuser.getText()
+                String query = "SELECT * FROM mahasiswa WHERE username='"+txtuser.getText()
                 +"' AND password='"+txtpass.getText()+"'";
                 java.sql.Connection con = (Connection) koneksi.koneksi();
                 java.sql.Statement st = con.createStatement();

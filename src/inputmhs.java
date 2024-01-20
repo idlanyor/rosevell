@@ -36,12 +36,7 @@ public class inputmhs extends javax.swing.JFrame {
        this.setTitle("Input Data Mahasiswa");
     }
 private void setcombo(){
-     cmbprodi.setEnabled(false);
-    cmbfakultas.addItem("MIPA");
-    cmbfakultas.addItem("FKIP");
-    cmbfakultas.addItem("Ekonomi");
-    cmbfakultas.addItem("Hukum");
-    
+     cmbprodi.setEnabled(true);
 }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -55,7 +50,6 @@ private void setcombo(){
         lblid = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         txtnpm = new javax.swing.JTextField();
-        cmbfakultas = new javax.swing.JComboBox<>();
         cmbprodi = new javax.swing.JComboBox<>();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
@@ -70,7 +64,7 @@ private void setcombo(){
 
         jPanel1.setBackground(new java.awt.Color(204, 0, 102));
 
-        txtnpm.setText("NPM");
+        txtnpm.setText("Input Mahasiswa");
         txtnpm.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 txtnpmMouseClicked(evt);
@@ -84,13 +78,6 @@ private void setcombo(){
         txtnpm.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txtnpmKeyReleased(evt);
-            }
-        });
-
-        cmbfakultas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Fakultas" }));
-        cmbfakultas.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cmbfakultasActionPerformed(evt);
             }
         });
 
@@ -151,25 +138,25 @@ private void setcombo(){
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(30, 30, 30)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtnpm, javax.swing.GroupLayout.PREFERRED_SIZE, 515, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtnama, javax.swing.GroupLayout.PREFERRED_SIZE, 515, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(cmbprodi, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(cmbfakultas, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(cmbprodi, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(txtnpm, javax.swing.GroupLayout.PREFERRED_SIZE, 515, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtnama, javax.swing.GroupLayout.PREFERRED_SIZE, 515, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jButton1)
                                 .addGap(18, 18, 18)
-                                .addComponent(jButton2)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton3)))
-                .addContainerGap(47, Short.MAX_VALUE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                                .addComponent(jButton2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jButton3)))
+                        .addContainerGap(47, Short.MAX_VALUE))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -180,13 +167,12 @@ private void setcombo(){
                 .addComponent(txtnpm, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(23, 23, 23)
                 .addComponent(txtnama, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(cmbfakultas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
+                .addGap(18, 18, 18)
+                .addComponent(cmbprodi, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(2, 2, 2)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(cmbprodi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
+                        .addGap(40, 40, 40)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jButton2)
                             .addComponent(jButton1)))
@@ -219,40 +205,6 @@ txtnpm.setText(null);
         // 
     }//GEN-LAST:event_txtnpmMouseClicked
 
-    private void cmbfakultasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbfakultasActionPerformed
-
-     if(cmbfakultas.getSelectedItem().equals("Fakultas")){
-        
-         cmbprodi.setSelectedItem("Prodi");
-    cmbprodi.setEnabled(false);
-     }
-        else if(cmbfakultas.getSelectedItem().equals("MIPA")){
-        cmbprodi.setEnabled(true);
-        cmbprodi.removeAllItems();
-        cmbprodi.addItem("Ilmu Komputer");
-        cmbprodi.addItem("Farmasi");
-        cmbprodi.addItem("Biologi");
-        cmbprodi.addItem("Kimia");
-    }
-    else if(cmbfakultas.getSelectedItem().equals("FKIP")){
-        cmbprodi.setEnabled(true);
-        cmbprodi.removeAllItems();
-        cmbprodi.addItem("PGSD");
-        cmbprodi.addItem("Arsitektur");
-    }
-    else if(cmbfakultas.getSelectedItem().equals("Ekonomi")){
-        cmbprodi.setEnabled(true);
-        cmbprodi.removeAllItems();
-        cmbprodi.addItem("Akutansi");
-        cmbprodi.addItem("Management");
-    }
-    else if(cmbfakultas.getSelectedItem().equals("Hukum")){
-        cmbprodi.setEnabled(true);
-        cmbprodi.removeAllItems();
-        cmbprodi.addItem("Ilmu Hukum");
-    }
-        // 
-    }//GEN-LAST:event_cmbfakultasActionPerformed
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
     String npm = txtnpm.getText();
     String nama = txtnama.getText();
@@ -260,18 +212,18 @@ txtnpm.setText(null);
             JOptionPane.showMessageDialog(null,"Isi Semua Form Yang Tersedia ");
         
     }
-    else if(cmbfakultas.getSelectedItem().equals("Fakultas")||cmbprodi.getSelectedItem().equals("Prodi")){
-            JOptionPane.showMessageDialog(null,"Pilih Fakultas atau prodi ");
+    else if(cmbprodi.getSelectedItem().equals("Prodi")){
+            JOptionPane.showMessageDialog(null,"Pilih Prodi ");
         }
         else{
         try {
             String sql1 = "INSERT INTO mahasiswa"
-                    + " VALUES ('"+txtnpm.getText()+"','" + txtnama.getText() + "','" + cmbfakultas.getSelectedItem()
+                    + " VALUES ('"+txtnpm.getText()+"','" + txtnama.getText() 
                     + "','" + cmbprodi.getSelectedItem() + "')";
             java.sql.Connection kon = (Connection) koneksi.koneksi();
             java.sql.PreparedStatement pdt = kon.prepareStatement(sql1);
             pdt.execute();
-           JOptionPane.showMessageDialog(null, "Penyimpanan Data Berhasil");
+           JOptionPane.showMessageDialog(null, "Data Mahasiswa Berhasil disimpan");
         new datamahasiswa().setVisible(true);
         dispose();
         } catch (Exception b) {
@@ -306,7 +258,6 @@ txtnama.setText(null);
      */
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<String> cmbfakultas;
     private javax.swing.JComboBox<String> cmbprodi;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;

@@ -211,7 +211,7 @@ else{
     model.addColumn("Stok");
     try{
         
-       String query = "select * from buku where id_buku = '"+txtsrc.getText()+"'";
+       String query = "select * from buku where judul LIKE '%" + txtsrc.getText() + "%'";
        java.sql.Connection kon = (Connection) koneksi.koneksi();
        java.sql.Statement stm = kon.createStatement();
        java.sql.ResultSet data = stm.executeQuery(query);

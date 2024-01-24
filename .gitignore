@@ -2,3 +2,4 @@ exe file
 Database
 .vscode
 /build/
+/dist/

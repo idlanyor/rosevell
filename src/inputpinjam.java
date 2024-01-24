@@ -231,13 +231,13 @@ txtidbk.setText("");
 
     private void txtnpmKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtnpmKeyReleased
 try{
-  String query = "select nama from mahasiswa where npm = '"+txtnpm.getText()+"'";
+  String query = "select name from mahasiswa where nim = '"+txtnpm.getText()+"'";
  java.sql.Connection kon = (Connection) koneksi.koneksi();
  java.sql.Statement stm = kon.createStatement();
  java.sql.ResultSet data = stm.executeQuery(query);
  
  if(data.next()){
-     txtnm.setText(data.getString("nama"));
+     txtnm.setText(data.getString("name"));
  }
  else{
   txtnm.setText("Nama");  
